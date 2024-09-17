@@ -5,6 +5,7 @@ import paperIcon from "../assets/images/icon-paper.svg";
 import scissorsIcon from "../assets/images/icon-scissors.svg";
 import lizardIcon from "../assets/images/icon-lizard.svg";
 import spockIcon from "../assets/images/icon-spock.svg";
+import pentagon from "../assets/images/bg-pentagon.svg";
 
 type Choice = "rock" | "paper" | "scissors" | "lizard" | "spock";
 type GameResult = "win" | "lose" | "draw";
@@ -79,11 +80,7 @@ const Game: React.FC<GameProps> = ({ onGameResult }) => {
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2 }}
         >
-          <img
-            src="/src/assets/images/bg-pentagon.svg"
-            alt="Pentagon"
-            className="pentagon-bg"
-          />
+          <img src={pentagon} alt="Pentagon" className="pentagon-bg" />
           {choices.map((choice) => (
             <motion.button
               key={choice}

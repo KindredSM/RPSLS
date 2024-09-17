@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -25,8 +27,6 @@
 .read-the-docs {
   color: #888;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
 :root {
   --scissors-gradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
@@ -292,8 +292,6 @@ body {
 
 .pentagon-layout .scissors {
   top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .pentagon-layout .paper {
@@ -465,4 +463,16 @@ body {
     top: 15%;
     left: -15px;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
