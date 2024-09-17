@@ -268,6 +268,60 @@ body {
   margin-top: 1rem;
 }
 
+.pentagon-layout {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 5rem auto 0;
+}
+
+.pentagon-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pentagon-layout .choice {
+  position: absolute;
+  z-index: 1;
+}
+
+.pentagon-layout .scissors {
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pentagon-layout .paper {
+  top: 25%;
+  right: -30px;
+}
+
+.pentagon-layout .rock {
+  bottom: -30px;
+  right: 10%;
+}
+
+.pentagon-layout .lizard {
+  bottom: -30px;
+  left: 10%;
+}
+
+.pentagon-layout .spock {
+  top: 25%;
+  left: -30px;
+}
+
+.pentagon-layout .choice:hover {
+  transform: scale(1.1);
+  z-index: 2;
+  box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
 @media (max-width: 768px) {
   .scoreboard {
     flex-direction: row;
@@ -323,54 +377,92 @@ body {
     width: 100%;
     max-width: 300px;
   }
+  .pentagon-layout {
+    width: 200px;
+    height: 200px;
+  }
+  .pentagon-bg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.pentagon-layout {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  margin: 5rem auto 0;
+@media (max-width: 768px) {
+  .pentagon-layout {
+    width: 300px;
+    height: 300px;
+    margin: 3rem auto 0;
+  }
+
+  .pentagon-layout .choice {
+    width: 80px;
+    height: 80px;
+    border-width: 10px;
+  }
+
+  .pentagon-layout .scissors {
+    top: -20px;
+  }
+
+  .pentagon-layout .paper {
+    top: 20%;
+    right: -20px;
+  }
+
+  .pentagon-layout .rock {
+    bottom: -20px;
+    right: 5%;
+  }
+
+  .pentagon-layout .lizard {
+    bottom: -20px;
+    left: 5%;
+  }
+
+  .pentagon-layout .spock {
+    top: 20%;
+    left: -20px;
+  }
+  .pentagon-layout .choice img {
+    width: 25px;
+    height: 25px;
+  }
 }
 
-.pentagon-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
+@media (max-width: 480px) {
+  .pentagon-layout {
+    width: 240px;
+    height: 240px;
+    margin: 2rem auto 0;
+  }
 
-.pentagon-layout .choice {
-  position: absolute;
-  z-index: 1;
-}
+  .pentagon-layout .choice {
+    width: 60px;
+    height: 60px;
+    border-width: 8px;
+  }
 
-.pentagon-layout .scissors {
-  top: -30px;
-}
+  .pentagon-layout .scissors {
+    top: -15px;
+  }
 
-.pentagon-layout .paper {
-  top: 25%;
-  right: -30px;
-}
+  .pentagon-layout .paper {
+    top: 15%;
+    right: -15px;
+  }
 
-.pentagon-layout .rock {
-  bottom: -30px;
-  right: 10%;
-}
+  .pentagon-layout .rock {
+    bottom: -15px;
+    right: 2%;
+  }
 
-.pentagon-layout .lizard {
-  bottom: -30px;
-  left: 10%;
-}
+  .pentagon-layout .lizard {
+    bottom: -15px;
+    left: 2%;
+  }
 
-.pentagon-layout .spock {
-  top: 25%;
-  left: -30px;
-}
-
-.pentagon-layout .choice:hover {
-  transform: scale(1.1);
-  z-index: 2;
-  box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.05);
+  .pentagon-layout .spock {
+    top: 15%;
+    left: -15px;
+  }
 }
