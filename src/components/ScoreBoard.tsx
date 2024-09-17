@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/logo-bonus.svg";
 
 interface ScoreBoardProps {
   score: number;
